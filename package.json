@@ -1,0 +1,21 @@
+{
+  "name": "11_11_21",
+  "version": "1.0.0",
+  "description": "making real database for school",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "data",
+    "url_api"
+  ],
+  "author": "ttosok",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.15"
+  }
+}

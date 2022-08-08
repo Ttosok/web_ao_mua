@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>đổi thông tin tài khoản</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/admin_main.css" type="text/css"/>
+        <link rel="stylesheet" href="../../css/index_main.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="site_left active">
+            <div class="left_nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="logo-html5"></ion-icon></span>
+                            <span class="title">thuong hieu</span>
+                        </a>
+                    </li>
+					<li class="line_side">
+                        <a href="/admin">
+                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">thong tin</span>
+                        </a>
+                    </li>
+                    <li class="line_side ">
+                        <a href="/admin/sanpham">
+                            <span class="icon"><ion-icon name="cloud-upload"></ion-icon></span>
+                            <span class="title">san pham</span>
+                        </a>
+                    </li>
+                    <li class="line_side line_side_active">
+                        <a href="/admin/taikhoan">
+                            <span class="icon"><ion-icon name="people"></ion-icon></span>
+                            <span class="title">khach hang</span>
+                        </a>
+                    </li>
+					<li class="line_side">
+                        <a href="/off">
+                            <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+                            <span class="title">thoat</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="site_right active">
+            <div class="right_head">
+                <div class="slector_bar" id="top_sleep">
+                    <ion-icon name="list-outline"></ion-icon>
+                </div>
+                <div class="user_admin unactive">
+                    <img src="../../img/windows-close.png"/>
+                </div>
+            </div>
+            <div class="right_body">
+                <div class="state_register">
+                    <div>
+                        <form>
+                            <div class="right_body_headline">
+                                <p>thong tin ca nhan</p>
+                            </div>
+                            <label for="ho_ten">ho va ten</label>
+                            <input type="text" id="ho_ten"/>
+                            <label for="sdt">sdt</label>
+                            <input type="text" id="sdt"/>
+                            <label for="email">email</label>
+                            <input type="text" id="email"/>
+                            <label for="img">hinh anh </label>
+                            <input type ="file" id ="img_select" accept="image/*" />
+                            <div class="right_body_headline">
+                                <p>thong tin tai khoan</p>
+                            </div>
+                            <label for="user_name">Tai khoan <span id="make_err"></span></label>
+                            <input type="text" id="user_name"/>
+                            <label for="password">Mat khau</label>
+                            <input type="text" id="password"/>
+                        </form>
+                        <a href="#" id="register">xac nhan</a>
+                        <a href="#" id="change_info" style="display: none;">thay doi</a>
+                    </div>
+                    <div class = "img_preshow">
+                        <img src ="" alt ="hinh anh coi truoc" class="preshow_img"/>
+                    </div>
+                </div>
+            </div>
+            <div class="right_foot">
+                 <p>
+                    <a href="#top_sleep" class="back_to_top">Top</a>
+                </p>
+                <div class="foot_info">
+                    <ul>
+                        <li>
+                            <h4>dia chi</h4>
+                        </li>
+                        <li>
+                            <a href="#">dia chi duong di</a>
+                            <p>thoi gian mo cua</p>
+                            <p>thong tinn ve cua hang</p>
+                        </li>
+                        <li>
+                            <h4>dia chi</h4>
+                        </li>
+                        <li>
+                            <a href="#">dia chi duong di</a>
+                            <p>thoi gian mo cua</p>
+                            <p>thong tinn ve cua hang</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>email:<span> email acress</span></p>
+                            <p>sdt:<spam> 0261654</spam></p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Copyright @2014 - All Rights reserved.
+                    Số ĐKKD: 41Q8020854 UBND Quận Thủ Đức, Tp.HCM cấp 06/06/2016</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../../javascript/main_setting.js" type="text/javascript"></script>
+    <script src="../../javascript/data_login.js" type="text/javascript"></script>
+    <script src="../../javascript/index_setting.js" type="text/javascript"></script>
+</html>

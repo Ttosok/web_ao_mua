@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>tao san pham</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/admin_main.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/index_main.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="site_left active">
+            <div class="left_nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="logo-html5"></ion-icon></span>
+                            <span class="title">thuong hieu</span>
+                        </a>
+                    </li>
+					<li class="line_side">
+                        <a href="/admin">
+                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">thong tin</span>
+                        </a>
+                    </li>
+                    <li class="line_side line_side_active">
+                        <a href="/admin/sanpham">
+                            <span class="icon"><ion-icon name="cloud-upload"></ion-icon></span>
+                            <span class="title">san pham</span>
+                        </a>
+                    </li>
+                    <li class="line_side">
+                        <a href="/admin/taikhoan">
+                            <span class="icon"><ion-icon name="people"></ion-icon></span>
+                            <span class="title">khach hang</span>
+                        </a>
+                    </li>
+                    <li class="line_side">
+                        <a href="/admin/info">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <span class="title">thông tin tài khoản</span>
+                        </a>
+                    </li>
+					<li class="line_side unactive">
+                        <a href="/off">
+                            <span class="icon"><ion-icon name="exit"></ion-icon></span>
+                            <span class="title">thoat</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="site_right active">
+            <div class="right_head">
+                <div class="slector_bar" id="top_sleep">
+                    <ion-icon name="list-outline"></ion-icon>
+                </div>
+				<div class="searching_engi no_user">
+                    <label>
+                        <input type="text" placeholder="tim kiem">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user_admin unactive">
+                    <img src="../img/windows-close.png"/>
+                </div>
+            </div>
+            <div class="right_body">
+                <div class="state_register">
+                    <div>
+                        <form>
+                            <div class="right_body_headline">
+                                <p>thông tin sản phẩm</p>
+                            </div>
+                            <label for="sp_name">tên sản phẩm <span id="make_err"></span></label>
+                            <input type="text" id="sp_name"/>
+                            <label for="sp_cost">giá tiền</label>
+                            <input type="text" id="sp_cost"/>
+                            <label for="sp_kind">loại sản phẩm</label>
+                            <input type="text" id="sp_kind"/>
+                            <label for="img">hình ảnh </label>
+                            <input type ="file" id ="img_select" accept="image/*" />
+							<div class="detail_info"><!-- check back -->
+								<div class="right_body_headline">
+									<p>thông tin chi tiết</p>
+								</div>
+								<label for="sp_info">thông tin tổng quát</label>
+								<textarea id="sp_info"></textarea>
+								<label for="sp_detail">thông tin chi tiết</label>
+								<textarea id="sp_detail"></textarea>
+							</div>
+                        </form>
+                        <a href="#" id="register_sp">xac nhan</a>
+                        <a href="#" id="change_info" style="display: none;">thay đổi</a>
+						<a href="#" id="delete_info" style="display: none;">xoá</a>
+                    </div>
+                    <div class = "img_preshow">
+                        <img src ="" alt ="hinh anh coi truoc" class="preshow_img"/>
+                    </div>
+                </div>
+            </div>
+            <div class="right_foot">
+                 <p>
+                    <a href="#top_sleep" class="back_to_top">Top</a>
+                </p>
+                <div class="foot_info">
+                    <ul>
+                        <li>
+                            <h4>dia chi</h4>
+                        </li>
+                        <li>
+                            <a href="#">dia chi duong di</a>
+                            <p>thoi gian mo cua</p>
+                            <p>thong tinn ve cua hang</p>
+                        </li>
+                        <li>
+                            <h4>dia chi</h4>
+                        </li>
+                        <li>
+                            <a href="#">dia chi duong di</a>
+                            <p>thoi gian mo cua</p>
+                            <p>thong tinn ve cua hang</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>email:<span> email acress</span></p>
+                            <p>sdt:<spam> 0261654</spam></p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Copyright @2014 - All Rights reserved.
+                    Số ĐKKD: 41Q8020854 UBND Quận Thủ Đức, Tp.HCM cấp 06/06/2016</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../javascript/main_setting.js" type="text/javascript"></script>
+    <script src="../javascript/data_login.js" type="text/javascript"></script>
+	<script src="../javascript/index_setting.js" type="text/javascript"></script>
+</html>

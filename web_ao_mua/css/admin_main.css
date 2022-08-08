@@ -1,0 +1,562 @@
+/*admin website part*/
+*{
+    margin: 0;
+    margin-right: 0px;
+    padding-left:0px;
+}
+:root{
+    --blue: #264baa;
+    --white: #EDEDED;
+    --black: #353535;
+}
+/*left base*/
+.site_left{
+    position: fixed;
+    float:left;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.site_left.active{
+    width: 90px;
+}
+.site_left .left_nav{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.left_nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.left_nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.left_nav ul li:hover{
+    background: var(--white);
+}
+.left_nav ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.left_nav ul li a{
+    position: relative;
+    width:100%;
+    display: flex;
+	align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--white);
+}
+.left_nav ul li:hover a{
+    color: var(--blue);
+    transition: 0.3s;
+}
+/*active for js*/
+.line_side.line_side_active{
+    background: var(--white);
+}
+.left_nav ul li.line_side_active a{
+    color: var(--blue);
+}
+/*the ball at the end of the nav*/
+.line_side_active a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top:-50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.line_side_active a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+.line_side_active a:not(:nth-child(1))::before{
+    content: '';
+    position: absolute;
+    right: 39px;
+    top:-50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.line_side_active a:not(:nth-child(1))::after{
+    content: '';
+    position: absolute;
+    right: 39px;
+    bottom: -50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+/*active for js end*/
+.left_nav ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 65px;
+    margin-right: 30px;
+    text-align: center;
+    font-size: 20pt;
+}
+/*.left_nav ul li a .icon img{
+    width: 30px;
+    height: 30px;
+    image-rendering: pixelated;
+}*/
+/*.left_nav ul li:hover a .icon img{
+    color: var(--blue);
+}*/
+.left_nav ul li a .title{
+    display: block;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+/*.left_nav ul li:hover a,
+.left_nav ul li.test:hover a{
+    color:#f00;
+}*/
+/*the ball at the end of the nav*/
+.left_nav ul li:hover a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top:-50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.left_nav ul li:hover a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+.left_nav ul li:hover a:not(:nth-child(1))::before{
+    content: '';
+    position: absolute;
+    right: 39px;
+    top:-50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.left_nav ul li:hover a:not(:nth-child(1))::after{
+    content: '';
+    position: absolute;
+    right: 39px;
+    bottom: -50px;
+    width: 50px;
+    height:50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+/*the ball at the end of the nav end*/
+/*right base*/
+/*base head*/
+.site_right{
+    position: absolute;
+    min-height: 100vh;
+    left: 300px;
+    width: calc(100% - 300px);
+    background: var(--white);
+    transition: 0.5s;
+}
+.site_right.active{
+    left: 90px;
+    width: calc(100% - 90px);
+}
+.site_right .right_head{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.site_right .right_head >div {
+    margin:  0 10px;
+}
+.slector_bar{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    left: 0;
+}
+.right_head div img{
+    width: 40px;
+    height: 40px;
+}
+.searching_engi{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.searching_engi label{
+    position: relative;
+    width: 100%;
+}
+.searching_engi label input[type = "text"]{
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 14pt;
+    border: 1px solid var(--black);
+    border-radius: 40px;
+    outline: none;
+}
+.searching_engi label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 14pt;
+}
+.user_admin{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    overflow: hidden;
+    cursor: pointer;
+}
+.user_admin img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*base head end*/
+/*right body*/
+.right_body{
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+}
+/*body head*/
+.right_body .body_show{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    padding: 0 15px;
+}
+.body_show .card{
+    position: relative;
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.08);
+    gap: 30px;
+}
+.body_show .card span{
+    position: relative;
+    font-size: 2.4em;
+    font-weight: 500;
+    color: var(--blue);
+}
+.body_show .card span p{
+    color:var(--black);
+    font-size: 18pt !important;
+    margin-top: 15px;
+}
+.body_show .card ion-icon{
+    font-size: 3.5em;
+    color:var(--black);
+}
+.body_show .card:hover{
+    background: var(--blue);
+}
+.body_show .card:hover span,
+.body_show .card:hover span p,
+.body_show .card:hover ion-icon{
+    color: var(--white);
+}
+/*body head end*/
+/*body body*/
+.body_list{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 30px;
+}
+.body_list > div{
+    margin: 20px;
+}
+/*list left*/
+.list_detail{
+    flex: 2; /*adding new */
+    /*width: clamp(550px, 55%, 68%); this needed abit more testing*/
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.08);
+    border-radius: 20px;
+}
+/*head of list*/
+.detail_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+    min-height: 60px;
+}
+.detail_head h2{
+    font-weight: 600;
+    color: var(--blue);
+    pointer-events: none;
+}
+/*button*/
+.detail_head .button{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color:var(--white);
+    border-radius: 6px;
+}
+.detail_head .button:hover{
+    background: var(--white);
+    color:var(--blue);
+}
+/*list left body*/
+.list_detail table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.list_detail .hd_list{
+	min-height: 80%;
+}
+.list_detail table thead td{
+    font-weight: 600;
+    text-transform: capitalize;
+    pointer-events: none;
+}
+.hd_list .hd_list_head{
+	
+}
+.list_detail table tr{
+    color: var(--black);
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+.list_detail table tbody tr:hover{
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+.hd_list .hd_list_body tr{
+	height: 45px;
+}
+.hd_list .hd_list_body tr td{
+	height: 25px;
+}
+.list_detail table tbody tr:last-child{
+    border: none;
+}
+.list_detail table tr td{
+    padding: 10px;
+}
+.list_detail table tr td:last-child{
+    text-align: end;
+}
+.list_detail table tr td:nth-child(2){
+    text-align: end;
+}
+.list_detail table tr td:nth-child(3){
+    text-align: center;
+}
+.status{
+    padding: 2px 4px;
+    font-size: 14pt;
+    border-radius: 4px;
+    font-weight: 500;
+}
+/*list right body*/
+.user_list{
+    flex: 1; /*adding new */
+    /*align-self:stretch; 100% not work for this at all*/
+    position: relative;
+    display: flex;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.08);
+    border-radius: 20px;
+    flex-direction: column;
+}
+.user_list table tr{
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.user_list .user_img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user_list .user_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--white) !important;
+}
+.user_list table tr td h4{
+    font-size: 16px; 
+    line-height: 1.2em;
+}
+.user_list table tr td h4 span{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+}
+.user_list table tr:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+.user_list table tr:hover td h4 span{
+    color: var(--white);
+}
+/*right body end*/
+/*setting for size website*/
+@media (max-width:1120px){
+    .site_left{
+        left: -300px;
+    }
+    .site_left.active{
+       width: 300px;
+       left: 0;
+    }
+    .site_right{
+        width: 100%;
+        left: 0;
+    }
+    .site_right.active{
+        left: 300px;
+    }
+}
+@media (max-width:991px){
+    .body_show{
+        flex-wrap: wrap;
+    }
+    .body_show .card:nth-child(1),
+    .body_show .card:nth-child(2){
+        flex-basis: 45%;
+    }
+}
+@media (max-width:840px){
+    .body_show .card{
+        gap: 60px;
+    }
+    .body_list{
+        flex-wrap: wrap;
+    }
+    .body_list .list_detail,
+    .body_list .user_list{
+        flex-basis: 100%;
+    }
+    
+}
+@media (max-width:600px){
+    .body_show .card:nth-child(even),
+    .body_show .card:nth-child(odd){
+        flex-basis: 100%;
+    }
+    .list_detail{
+        overflow-x: auto;
+    }
+    .list_detail .status{
+        white-space: nowrap;
+    }
+    .detail_head h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:520px){
+    .site_left{
+        width: 100%;
+        left: -100%;
+        z-index: 100;
+    }
+    .site_left.active{
+        width: 100%;
+        left: 0;
+    }
+    .slector_bar{
+        z-index: 101;
+    }
+    .site_right.active .slector_bar{
+        position: fixed;
+        color: var(--white);
+        right: 0;
+        left: initial;
+    }
+    .site_right.active{
+        left: 0px;
+    }
+}
+/*setting for size website end*/
