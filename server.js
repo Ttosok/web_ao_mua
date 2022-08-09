@@ -4,7 +4,8 @@ const web = express();
 const Datastore = require("nedb");
 
 //effect using the express 
-web.listen(9000, () => console.log("listen at port 9000"));
+const PORT = process.env.PORT || 9000
+web.listen(PORT, () => console.log("listen at port 9000"));
 web.use(express.static(__dirname  + "/web_ao_mua"));
 web.use(express.json({ limit : "2mb"}));
 
