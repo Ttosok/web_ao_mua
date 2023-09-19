@@ -4,9 +4,9 @@
   1.  font:
     -  html, css, javascript.
   2.  server:
-    -  express.js (library/add-on), node.js.
+    -  [express.js](https://expressjs.com/) (library/add-on), [node.js](https://nodejs.org/en).
   3. data
-    -   nedb.
+    - [nedb](https://github.com/louischatriot/nedb).
 - this project collected around 20 pages.
 ## header
  **base**
